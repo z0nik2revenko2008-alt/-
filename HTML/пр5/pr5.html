@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #f0f0f0; /* Светлый фон */
+}
+
+.car {
+  width: 200px;
+  height: 100px;
+  background-color: #333; /* Темно-серый кузов */
+  border-radius: 10px;
+  position: absolute;
+  bottom: 50px;
+  left: -200px;
+  animation: drive 5s linear forwards;
+}
+
+.wheels {
+  width: 40px;
+  height: 20px;
+  background-color: #000; /* Черные колеса */
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  box-shadow: 0 0 5px #333; /* Добавляем тень колесам */
+}
+
+.wheels.left {
+  left: 20px;
+}
+
+.wheels.right {
+  right: 20px;
+}
+
+.window {
+  width: 60px;
+  height: 40px;
+  background-color: #eee; /* Светло-серые окна */
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  border-radius: 5px; /* Закругленные углы окон */
+}
+
+.window::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #000; /* Черные рамки окон */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.window::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #000; /* Черные рамки окон */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes drive {
+  0% {
+    left: -200px;
+  }
+  100% {
+    left: calc(100vw - 250px); 
+  }
+}
+
+.road {
+  width: 100%;
+  height: 20px;
+  background-color: #666; /* Темно-серая дорога */
+  position: absolute;
+  bottom: 70px;
+}
+
+.road::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #fff; /* Белая разметка */
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.sun {
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  box-shadow: 0 0 10px yellow; /* Добавляем свет от солнца */
+}
+
+.tree {
+  width: 20px;
+  height: 50px;
+  background-color: #008000; /* Зеленое дерево */
+  position: absolute;
+  bottom: 0;
+  left: 200px;
+  border-radius: 5px 5px 0 0; /* Закругленные верхние углы */
+}
+
+.tree::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #008000; /* Шапка дерева */
+  position: absolute;
+  top: -20px;
+  left: -10px;
+}
+
+</style>
+</head>
+<body style="background-image:url(images/background.jpg);">
+
+<div class="road"></div>
+<div class="sun"></div>
+<div class="tree"></div>
+
+<div class="car">
+  <div class="wheels left"></div>
+  <div class="wheels right"></div>
+  <div class="window"></div>
+</div>
+
+</body>
+</html>

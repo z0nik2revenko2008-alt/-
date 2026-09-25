@@ -1,0 +1,66 @@
+
+.container{
+    display: flex;
+    gap: 60px;
+}
+.column{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 218px;
+    height: 100%;
+}
+.column02{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 446px;
+    height: 100%;
+}
+.element{
+    border: 2px solid #000;
+    width: 100px;
+    height: 100px;
+}
+.big{
+    width: 214px;
+}
+.grn{
+    background-color: rgb(4, 94, 4);
+}
+.brl{
+    background-color: brown;
+}
+.krv{
+    background-color: darkgreen;
+}
+.barkpq{
+    background-color: rebeccapurple;
+}
+.blu{
+    background-color: cadetblue;
+}
+.ros{
+    background-color: #ad0998;
+    
+}
+.orng{
+    background-color: lightsalmon;
+}
+.bigger{
+    width: 213px;
+    height: 213px;
+}
+.grounbig{
+    width: 100px;
+    height: 218px;
+}
+.scroll{
+    width: 2950px;
+    padding-right: 50px;
+}
+.backplat{
+    height: calc(100vh - 100px);
+    padding: 50px 0 50px 50px;
+    background-color: #222
+}
